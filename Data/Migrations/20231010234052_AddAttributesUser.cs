@@ -19,26 +19,6 @@ namespace LoginRegister_MateoVelasquez.Data.Migrations
                 table: "AspNetUsers",
                 type: "nvarchar(max)",
                 nullable: true);
-
-            migrationBuilder.CreateIndex(
-                name: "IX_PersistedGrants_ConsumedTime",
-                table: "PersistedGrants",
-                column: "ConsumedTime");
-        }
-
-        protected override void Down(MigrationBuilder migrationBuilder)
-        {
-            migrationBuilder.DropIndex(
-                name: "IX_PersistedGrants_ConsumedTime",
-                table: "PersistedGrants");
-
-            migrationBuilder.DropColumn(
-                name: "Name",
-                table: "AspNetUsers");
-
-            migrationBuilder.DropColumn(
-                name: "UserNames",
-                table: "AspNetUsers");
         }
     }
 }
